@@ -37,7 +37,13 @@ async function seed () {
         description: "Dense, creamy cheddar"
     });
 
-    return {u1, b1, b2, c1, c2, c3}
+    await b1.addCheese(c1);
+    await b1.addCheese(c2);
+    await b2.addCheese(c2);
+    await b2.addCheese(c3);
+    await u1.addBoard(b1);
+    await u1.addBoard(b2);
+
 }
 
 module.exports = seed;
